@@ -70,7 +70,7 @@ var App = React.createClass({
 
 		return (
 			<div className="app">
-        <h1>{'Polkupyorasanakirja'}</h1>
+        <h1>{'Polkupyöräsanakirja'}</h1>
         <h2>Suomi - englanti - suomi</h2>
         <form onSubmit={function(e){e.preventDefault()}}>
           <input ref="keyword" placeholder="" type="text" value={this.state.keyword} onChange={this.updateKeyword}/>

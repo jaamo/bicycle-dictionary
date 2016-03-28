@@ -5,8 +5,48 @@ module.exports = flux.createStore({
 
   // The dictionary.
   messages: [
+
+    // Materials
+    ["alumiini", "aluminium"],
+    ["teräs", "steel"],
+    ["hiilikuitu", "carbon"],
+
+    // Base
+    ["runko", "frame"],
+    ["haarukka", "fork"],
+    ["joustohaarukka", "suspension fork"],
+
+    // Tires
+    ["rengas", "tire/tyre"],
+    ["vanne", "rim"],
+    ["sisäkumi", "inner tube"],
+    ["pinna", "spoke"],
+
+    // Drivetrain
+    ["kampi", "crank"],
+    ["poljin", "pedal"],
+    ["ketju", "chain"],
+    ["vaihtaja", "derailleur"],
+    ["etuvaihtaja", "front derailleur"],
+    ["takavaihtaja", "rear derailleur"],
+
+
+    // Steering
+    ["ohjaustanko", "handlebar"],
     ["ohjaustangonkannatin", "stem"],
-    ["satula", "saddle"]
+
+    // Other
+    ["laakeri", "bearing"],
+    ["satula", "saddle"],
+    ["soittokello", "bell"],
+
+    // Brakes
+    ["levyjarrut", "hydraulic brakes"],
+    ["jarrut", "brakes"],
+    ["jarrukahva", "brake lever"]
+
+    // Tools
+
   ],
 
   // Filtered dictionary.
