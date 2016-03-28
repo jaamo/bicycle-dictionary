@@ -11,10 +11,10 @@ body {
 
 #bike {
   position: fixed;
-  width: 66%;
+  width: 40%;
   opacity: 0.2;
   bottom: -33%;
-  left: 52%;
+  left: 62%;
   margin-left: -33%; }
   @media screen and (max-width: 720px) {
     #bike {
