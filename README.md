@@ -2,7 +2,10 @@
 
 Small react experiment to create dictionary app that translates bicycle terms from Finnish to English and vice versa.
 
-Base on this boilerplate:
+Live demo:
+http://www.kampiapina.com/blogi/polkupyorasanakirja/
+
+Based on this boilerplate:
 https://github.com/christianalfoni/flux-react-boilerplate
 
 ### Development
