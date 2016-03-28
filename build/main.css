@@ -1,13 +1,33 @@
+html {
+  height: 100%; }
+
 body {
   background-color: white;
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow: hidden;
+  height: 100%; }
+
+#bike {
+  position: fixed;
+  width: 66%;
+  opacity: 0.2;
+  bottom: -33%;
+  left: 52%;
+  margin-left: -33%; }
+  @media screen and (max-width: 720px) {
+    #bike {
+      display: none; } }
 
 .app {
   width: 70%;
   margin: auto;
   margin-top: 2rem; }
+  @media screen and (max-width: 720px) {
+    .app {
+      width: 95%;
+      margin-top: 5rem; } }
 
 h1 {
   font-family: "Roboto Slab", serif;
@@ -17,6 +37,9 @@ h1 {
   margin: 0;
   padding: 0;
   line-height: 3.9rem; }
+  @media screen and (max-width: 720px) {
+    h1 {
+      font-size: 2rem; } }
 
 h2 {
   font-family: "Roboto Slab", serif;
@@ -26,6 +49,9 @@ h2 {
   margin: 0 0 2rem 0;
   padding: 0;
   font-size: 1.6rem; }
+  @media screen and (max-width: 720px) {
+    h2 {
+      font-size: 1rem; } }
 
 input {
   font-family: "Open Sans", sans-serif;
@@ -35,11 +61,16 @@ input {
   color: #0a0a0a;
   width: 100%;
   outline: none;
-  padding: 1rem; }
+  padding: 1rem;
+  box-sizing: border-box; }
+  @media screen and (max-width: 720px) {
+    input {
+      font-size: 1.5rem;
+      padding: 0.5rem; } }
 
 .word {
   overflow: hidden;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #0a0a0a;
   margin-top: 2rem; }
   .word__left {

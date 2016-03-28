@@ -24,3 +24,6 @@ https://github.com/christianalfoni/flux-react-boilerplate
 * **styles/**: Where you put your css files
 * **specs/**: Where you put your test files
 * **gulpfile**: Gulp configuration
+
+### Credits
+Bicycle icon by Edward Boatman from the Noun Project
