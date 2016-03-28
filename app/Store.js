@@ -16,7 +16,8 @@ module.exports = flux.createStore({
 
   // Available actions.
   actions: [
-    actions.searchMessages
+    actions.searchMessages,
+    actions.clearSearch
   ],
 
   /**
@@ -40,6 +41,15 @@ module.exports = flux.createStore({
 
     this.emitChange();
 
+  },
+
+
+  /**
+   * Clear search to initial state.
+   */
+  clearSearch: function() {
+      this.filteredMessages = [];
+      this.emitChange();
   },
 
   exports: {

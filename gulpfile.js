@@ -11,9 +11,12 @@ var concat = require('gulp-concat');
 var cssmin = require('gulp-cssmin');
 var gutil = require('gulp-util');
 var shell = require('gulp-shell');
+var sass = require('gulp-sass');
 var glob = require('glob');
 var livereload = require('gulp-livereload');
 //var jasminePhantomJs = require('gulp-jasmine2-phantomjs');
+
+console.log('Deps loaded');
 
 // External dependencies you do not want to rebundle while developing,
 // but include in your application deployment
@@ -67,7 +70,7 @@ var browserifyTask = function (options) {
   // should not rebundle on file changes. This only happens when
   // we develop. When deploying the dependencies will be included
   // in the application bundle
-  if (options.development) {
+  if (false && options.development) {
 
   	var testFiles = glob.sync('./specs/**/*-spec.js');
 		var testBundler = browserify({
@@ -130,6 +133,7 @@ var cssTask = function (options) {
         var start = new Date();
         console.log('Building CSS bundle');
         gulp.src(options.src)
+					.pipe(sass().on('error', sass.logError))
           .pipe(concat('main.css'))
           .pipe(gulp.dest(options.dest))
           .pipe(notify(function () {
@@ -140,6 +144,7 @@ var cssTask = function (options) {
       gulp.watch(options.src, run);
     } else {
       gulp.src(options.src)
+				.pipe(sass().on('error', sass.logError))
         .pipe(concat('main.css'))
         .pipe(cssmin())
         .pipe(gulp.dest(options.dest));
@@ -149,6 +154,8 @@ var cssTask = function (options) {
 // Starts our development workflow
 gulp.task('default', function () {
 
+	console.log('Running default task.');
+
   browserifyTask({
     development: true,
     src: './app/main.js',
@@ -157,7 +164,7 @@ gulp.task('default', function () {
 
   cssTask({
     development: true,
-    src: './styles/**/*.css',
+    src: './styles/**/*.scss',
     dest: './build'
   });
 
@@ -173,7 +180,7 @@ gulp.task('deploy', function () {
 
   cssTask({
     development: false,
-    src: './styles/**/*.css',
+    src: './styles/**/*.scss',
     dest: './dist'
   });
 
