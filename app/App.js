@@ -30,13 +30,8 @@ var App = React.createClass({
   },
 
   searchMessages: function (event) {
-    //event.preventDefault();
     var input = this.refs.keyword;
     actions.searchMessages(input.value);
-    console.log("Start search.");
-    // this.setState({
-    //   keyword: ''
-    // });
   },
 
   updateKeyword: function (event) {
